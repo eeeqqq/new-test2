@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name></display-name>
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:spring/applicationContext.xml</param-value>
+  </context-param>
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description>user</description>
+    <display-name>UServlet</display-name>
+    <servlet-name>UServlet</servlet-name>
+    <servlet-class>test2.servlet.UServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UServlet</servlet-name>
+    <url-pattern>/UServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RegisterUIServlet</display-name>
+    <servlet-name>RegisterUIServlet</servlet-name>
+    <servlet-class>test2.servlet.RegisterUIServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterUIServlet</servlet-name>
+    <url-pattern>/RegisterUIServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
